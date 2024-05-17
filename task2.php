@@ -62,16 +62,16 @@
         }
     }
     //تابعی که با گرفتن دو مقدار عددی یه شکل ایجاد میکنه
-    function ForLoop($width,$height){
-        for($i = 0; $i < $width; $i++){
-            for($j = 0; $j < $height; $j++){
+    function ForLoop($y,$x){
+        for($i = 0; $i < $y; $i++){
+            for($j = 0; $j < $x; $j++){
                 echo " * ";
             }
             echo "<br>";
         }
     }
     // تست تابع ها
-    ForLoop(5,5);
+    ForLoop(10,6);
     IfElse(11);
     SwitchCase("Farvardin");
     ?>
