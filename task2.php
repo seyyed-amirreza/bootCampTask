@@ -62,7 +62,7 @@
         }
     }
     //تابعی که با گرفتن دو مقدار عددی یه شکل ایجاد میکنه
-    function ForLoop($y,$x){
+    function ForLoop($x,$y){
         for($i = 0; $i < $y; $i++){
             for($j = 0; $j < $x; $j++){
                 echo " * ";
