@@ -72,8 +72,8 @@
     }
     // تست تابع ها
     ForLoop(10,6);
-    IfElse(11);
-    SwitchCase("Farvardin");
+    IfElse(1);
+    SwitchCase("October");
     ?>
 </body>
 </html>
