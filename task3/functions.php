@@ -40,6 +40,7 @@
     //Find element
     function FindElement(&$arr , $val){
         echo array_search($val,$arr);
+        echo "<br>";
     }
     //Extract keys
     function ExtractKeys(&$arr){
