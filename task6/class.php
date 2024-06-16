@@ -6,22 +6,22 @@
         public $quantity;
         public $producer;
 
-        function __construct($name,$price,$quantity,$producer){
+        public function __construct($name,$price,$quantity,$producer){
             $this->name=$name;
             $this->price=$price;
             $this->quantity=$quantity;
             $this->producer=$producer;
         }
-        function getName(){
+        public function getName(){
             return $this->name;
         }
-        function getPrice(){
-            return $this->pricer;
+        public function getPrice(){
+            return $this->price;
         }
-        function getQuantity(){
+        public function getQuantity(){
             return $this->quantity;
         }
-        function getProducer(){
+        public function getProducer(){
             return $this->producer;
         }
     }

@@ -7,8 +7,22 @@
     <title>Main</title>
 </head>
 <body>
-    <form action="class.php">
+    <form method="post" action="info.php">
+        <label for="name">Product name:</label><br>
+        <input type="text" id="name" name="name">
         
+        <br>
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price">
+
+        <br>
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id ="quantity" name="quantity">
+        <br>
+        <label for="producer">Producer:</label><br>
+        <input type="text" id="producer" name="producer">
+        <br><br>
+        <input type="submit">
     </form>
 </body>
 </html>
