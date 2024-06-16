@@ -68,21 +68,27 @@
     </form>
     <?php
         if($name != "" && $lname != "" && $email != ""){
-            $saved = fopen("save.txt","a");
-            $txt = "<br>Name : " . $name . "\n" .
-            "Last Name : " . $lname . "\n" .
-            "Gender : " . $gender . "\n" .
-            "Email : " . $email . "\n".
-            "---------------";
-            fwrite($saved,$txt);
+            $saved = fopen("save.json","a");
+            $current_file = file_get_contents("save.json");
+            $array_data = json_decode($current_file,true);
+            $jsonData = 
+            [
+                "name" => $name,
+                "lastName" => $lname,
+                "gender" => $gender,
+                "email" => $email
+            ];
+            $array_data[]=$jsonData;
+            $jsonString = json_encode($array_data, JSON_PRETTY_PRINT);
+            fwrite($saved,$jsonString);
             fclose($saved);
-            $read = fopen("save.txt","r");
+
+            $read = fopen("save.json","r");
             while(!feof($read)){
                 echo fgets($read) . "<br>";
             }
             fclose($read);
         }
-        
 ?>
 </body>
 </html>
