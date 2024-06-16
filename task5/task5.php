@@ -68,9 +68,9 @@
     </form>
     <?php
         if($name != "" && $lname != "" && $email != ""){
-            $saved = fopen("save.json","a");
+
             $current_file = file_get_contents("save.json");
-            $array_data = json_decode($current_file,true);
+            $array_data = json_decode($current_file);
             $jsonData = 
             [
                 "name" => $name,
@@ -78,10 +78,9 @@
                 "gender" => $gender,
                 "email" => $email
             ];
-            $array_data[]=$jsonData;
+            array_push($array_data,$jsonData);
             $jsonString = json_encode($array_data, JSON_PRETTY_PRINT);
-            fwrite($saved,$jsonString);
-            fclose($saved);
+            file_put_contents('save.json',$jsonString);
 
             $read = fopen("save.json","r");
             while(!feof($read)){
