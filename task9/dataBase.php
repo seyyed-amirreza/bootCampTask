@@ -109,7 +109,7 @@
             $stmt = $connection->prepare("UPDATE $tableName SET $cond1 WHERE $cond2");
             $stmt->execute();
         }
-        //ترکیب بروزرسانیو درج
+        //ترکیب بروزرسانی و درج
         function UpsertProduct($tableName,$name,$price,$quantity,$producer,$cond){
             $connection = $this->connect2DB();
             $stmt = $connection->prepare("INSERT INTO $tableName
