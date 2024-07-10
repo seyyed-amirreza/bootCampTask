@@ -30,6 +30,7 @@
             $connection = $this->connect2DB();
             $stmt = $connection->prepare("SELECT $col FROM $tableName");
             $stmt->execute();
+            return $stmt;
         }
         //سلکت با شرط
         function SelectWhere($tableName,$cond,$col){
@@ -131,6 +132,23 @@
             $connection = $this->connect2DB();
             $stmt = $connection->prepare("DROP TABLE $tableName");
             $stmt->execute();
+        }
+        function showTable($statement){
+            $connection = $this->connect2DB();
+            echo "<table border=1 cellpadding=3  align=center  cellspacing=0 style='border: solid 3px black;'>";
+            echo "<tr><th>Name</th><th>Price</th><th>Quantity</th><th>Producer</th></tr>";
+            foreach ($statement->fetchAll() as $value) {
+                echo "<tr>";  
+                $constVal = $value['name'];
+                echo"<td> $constVal</td>";      
+                $constVal = $value['price'];
+                echo"<td> $constVal</td>";      
+                $constVal = $value['quantity'];
+                echo"<td> $constVal</td>";      
+                $constVal = $value['producer'];
+                echo"<td> $constVal</td>";
+                echo "</tr><br>";
+            }
         }
     }
 ?>
