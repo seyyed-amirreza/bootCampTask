@@ -14,7 +14,7 @@
     }
     class ConnectToDB extends DataBase{
         protected function connect2DB(){
-            $conn = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
+            $conn = new PDO("mysql:host=localhost;dbname=mydatab", "root", "");
             return $conn;
         }
     }

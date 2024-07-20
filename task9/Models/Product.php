@@ -1,5 +1,5 @@
 <?php
-    include("dataBase.php");
+    include_once("dataBase.php");
     class Product extends ConnectToDB
     {
         private $name;
@@ -67,9 +67,9 @@
             }
         }
         //درج 
-        function Insert($tableName,$name,$price,$quantity,$producer){
+        function Insert($name,$price,$quantity,$producer){
             $connection = $this->connect2DB();
-            $stmt = $connection->prepare("INSERT INTO $tableName
+            $stmt = $connection->prepare("INSERT INTO product
             VALUES (:name, :price, :quantity, :producer)");
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':price', $price);

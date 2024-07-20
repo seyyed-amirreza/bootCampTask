@@ -7,15 +7,11 @@
         private $quantity;
         private $producer;
 
-        function __construct($servername,$username,$password,$dbname,$name,$price,$quantity,$producer){
+        function __construct($name,$price,$quantity,$producer){
             $this->name=$name;
             $this->price=$price;
             $this->quantity=$quantity;
             $this->producer=$producer;
-            $this->servername = $servername;
-            $this->username = $username;
-            $this->password = $password;
-            $this->dbname = $dbname;
         }
         function getName(){
             return $this->name;
