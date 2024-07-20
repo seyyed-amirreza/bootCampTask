@@ -25,27 +25,32 @@
         function getProducer(){
             return $this->producer;
         }
+        //باز کردن دیتا بیس
+        function OpenConnection(){
+            $this->connect2DB();
+        }
+        //بستن دیتا بیس
+        function CloseConnection(){
+            $this->closeDB();
+        }
         //درج 
         function Insert($name,$price,$quantity,$producer){
-            $this->connect2DB();
             $product = R::dispense('product');
             $product['name'] = $name;
             $product['price'] = $price;
             $product['quantity'] = $quantity;
             $product['producer'] = $producer;
             $id = R::store($product);
-            $this->closeDB();
             return $id;
         }
         //لود کردن یک ریکورد
         function Load($id){
-            $this->connect2DB();
             $product = R::load('product', $id);
             return $product;
         }
         //بروزرسانی
         function Update($id,$col,$val){
-            $this->connect2DB();
+            // $this->connect2DB();
             $product = $this->Load($id);
             switch($col){
                 case $col == 'name':
@@ -65,6 +70,7 @@
                     $id = R::store($product);
                     break;
             }
+            // $this->closeDB();
         }
         //حذف
         function Delete($id){
