@@ -1,4 +1,5 @@
 <?php
+    require("../Models/orm/rb.php");
     class DataBase{
         protected $servername;
         protected $username;
@@ -19,4 +20,3 @@
         }
     }
 ?>
-
