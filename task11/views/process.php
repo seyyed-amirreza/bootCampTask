@@ -1,6 +1,7 @@
 <?php
-include_once("../Models/dataBase.php");
-include_once("../Models/Product.php");
+
+include_once("../models/dataBase.php");
+include_once("../models/product.php");
 $product = new Product($_POST["name"],$_POST["price"],$_POST["quantity"],$_POST["producer"]);
 $product->OpenConnection();
 $id = $product->Insert($_POST["name"],$_POST["price"],$_POST["quantity"],$_POST["producer"]);

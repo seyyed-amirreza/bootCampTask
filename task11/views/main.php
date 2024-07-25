@@ -7,7 +7,7 @@
     <title>Main</title>
 </head>
 <body>
-    <form method="post" action="proccess.php">
+    <form method="post" action="process">
         <label for="name">Product name:</label><br>
         <input type="text" id="name" name="name">
         
