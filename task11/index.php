@@ -1,16 +1,16 @@
 <?php
     $request = $_SERVER['REQUEST_URI'];
-    var_dump($request);
-
+    
+    $url = '/MyWeb/task11';
     $viewDir = '/views/';
 
     switch ($request) {
-        case '':
-        case '/':
+        case $url.'':
+        case $url.'/':
             require __DIR__ . $viewDir . 'home.php';
             break;
     
-        case '/main':
+        case $url.'/main':
             require __DIR__ . $viewDir . 'main.php';
             break;
     
