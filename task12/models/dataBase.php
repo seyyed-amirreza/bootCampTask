@@ -1,7 +1,6 @@
 <?php
-    namespace Models\dataBase;
-    // include_once("../Models/orm/RedBeanPHP.php");
-    class ConnectToDB{
+    namespace models;
+    class dataBase{
         protected function connect2DB(){
             $connection = R::setup("mysql:host=localhost;dbname=mydatab", "root", "");
         }

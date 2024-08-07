@@ -1,6 +1,6 @@
 <?php
 
-namespace Models\RedBeanPHP {
+namespace RedBeanPHP {
 
 /**
  * RedBean Logging interface.

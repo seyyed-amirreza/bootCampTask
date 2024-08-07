@@ -1,7 +1,7 @@
 <?php
-    namespace Models\product;
+    namespace models;
     // include_once("dataBase.php");
-    class Product extends ConnectToDB
+    class product extends dataBase
     {
         private $name;
         private $price;

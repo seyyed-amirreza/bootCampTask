@@ -10,4 +10,9 @@
     <h1>Home</h1>
     <p>Welcome in my app.</p>
 </body>
+<?php
+    $vendorDir = dirname(__DIR__);
+    $baseDir = dirname($vendorDir);
+    echo $baseDir . '/task12';
+?>
 </html>
