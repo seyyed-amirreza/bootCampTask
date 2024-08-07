@@ -1,5 +1,5 @@
 <?php
-    namespace App\product;
+    namespace Models\product;
     // include_once("dataBase.php");
     class Product extends ConnectToDB
     {

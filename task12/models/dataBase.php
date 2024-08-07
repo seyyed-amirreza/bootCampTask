@@ -1,5 +1,5 @@
 <?php
-    namespace App\dataBase;
+    namespace Models\dataBase;
     // include_once("../Models/orm/RedBeanPHP.php");
     class ConnectToDB{
         protected function connect2DB(){
