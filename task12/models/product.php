@@ -1,6 +1,5 @@
 <?php
     namespace models;
-    // include_once("dataBase.php");
     class product extends dataBase
     {
         private $name;

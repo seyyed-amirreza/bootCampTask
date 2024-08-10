@@ -1,5 +1,5 @@
 <?php
-    require './vendor/autoload.php';
+    require_once __DIR__ . '/vendor/autoload.php';
     $viewDir = '/views/';
     $url = '/MyWeb/task12';
     $request = $_SERVER['REQUEST_URI'];
