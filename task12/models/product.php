@@ -1,5 +1,6 @@
 <?php
     namespace models;
+    use RedBeanPHP as O;
     class product extends dataBase
     {
         private $name;
@@ -35,39 +36,38 @@
         }
         //درج 
         function Insert($name,$price,$quantity,$producer){
-            $product = R::dispense('product');
+            $product = O\R::dispense('product');
             $product['name'] = $name;
             $product['price'] = $price;
             $product['quantity'] = $quantity;
             $product['producer'] = $producer;
-            $id = R::store($product);
+            $id = O\R::store($product);
             return $id;
         }
         //لود کردن یک ریکورد
         function Load($id){
-            $product = R::load('product', $id);
+            $product = O\R::load('product', $id);
             return $product;
         }
         //بروزرسانی
         function Update($id,$col,$val){
-            // $this->connect2DB();
             $product = $this->Load($id);
             switch($col){
                 case $col == 'name':
                     $product['name'] = $val;
-                    $id = R::store($product);
+                    $id = O\R::store($product);
                     break;
                 case $col == 'price':
                     $product['price'] = $val;
-                    $id = R::store($product);
+                    $id = O\R::store($product);
                     break;
                 case $col == 'quantity':
                     $product['quantity'] = $val;
-                    $id = R::store($product);
+                    $id = O\R::store($product);
                     break;
                 case $col == 'producer':
                     $product['producer'] = $val;
-                    $id = R::store($product);
+                    $id = O\R::store($product);
                     break;
             }
             // $this->closeDB();
@@ -76,7 +76,7 @@
         function Delete($id){
             $this->connect2DB();
             $product = $this->Load($id);
-            R::trash($product);
+            O\R::trash($product);
         }
     }
 ?>

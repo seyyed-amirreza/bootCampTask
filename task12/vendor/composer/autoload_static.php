@@ -11,12 +11,20 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         array (
             'models\\' => 7,
         ),
+        'R' => 
+        array (
+            'RedBeanPHP\\' => 11,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'models\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/task12',
+            0 => __DIR__ . '/../..' . '/models',
+        ),
+        'RedBeanPHP\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/models/orm/RedBeanPHP',
         ),
     );
 
