@@ -13,6 +13,10 @@
             $this->price=$price;
             $this->quantity=$quantity;
             $this->producer=$producer;
+            $this->connect2DB();
+        }
+        function __destruct(){
+            $this->closeDB();
         }
         function getName(){
             return $this->name;
@@ -26,21 +30,13 @@
         function getProducer(){
             return $this->producer;
         }
-        //باز کردن دیتا بیس
-        function OpenConnection(){
-            $this->connect2DB();
-        }
-        //بستن دیتا بیس
-        function CloseConnection(){
-            $this->closeDB();
-        }
         //درج 
-        function Insert($name,$price,$quantity,$producer){
+        function Insert(){
             $product = RedBean\R::dispense('product');
-            $product['name'] = $name;
-            $product['price'] = $price;
-            $product['quantity'] = $quantity;
-            $product['producer'] = $producer;
+            $product['name'] = $this->name;
+            $product['price'] = $this->price;
+            $product['quantity'] = $this->quantity;
+            $product['producer'] = $this->producer;
             $id = RedBean\R::store($product);
             return $id;
         }
@@ -70,7 +66,6 @@
                     $id = RedBean\R::store($product);
                     break;
             }
-            // $this->closeDB();
         }
         //حذف
         function Delete($id){
