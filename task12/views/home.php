@@ -9,6 +9,9 @@
 <body>
     <h1>Home</h1>
     <p>Welcome in my app.</p>
+    <form method="post" action="main">
+        <button>submit</button>
+    </form>
 </body>
 <?php
     $vendorDir = dirname(__DIR__);
