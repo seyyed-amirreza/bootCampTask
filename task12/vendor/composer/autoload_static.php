@@ -24,7 +24,7 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         ),
         'RedBeanPHP\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/models/orm/RedBeanPHP',
+            0 => __DIR__ . '/../..' . '/models/RedBeanPHP',
         ),
     );
 

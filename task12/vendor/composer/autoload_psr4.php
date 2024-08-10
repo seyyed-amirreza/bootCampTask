@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'models\\' => array($baseDir . '/models'),
-    'RedBeanPHP\\' => array($baseDir . '/models/orm/RedBeanPHP'),
+    'RedBeanPHP\\' => array($baseDir . '/models/RedBeanPHP'),
 );

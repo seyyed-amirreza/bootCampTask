@@ -2,7 +2,7 @@
     "autoload": {
         "psr-4": {
             "models\\": "models",
-            "RedBeanPHP\\" : "models/orm/RedBeanPHP"
+            "RedBeanPHP\\" : "models/RedBeanPHP"
         }
     }
 }
