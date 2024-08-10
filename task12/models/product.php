@@ -1,6 +1,6 @@
 <?php
     namespace models;
-    use RedBeanPHP as O;
+    use RedBeanPHP as RedBean;
     class product extends dataBase
     {
         private $name;
@@ -36,17 +36,17 @@
         }
         //درج 
         function Insert($name,$price,$quantity,$producer){
-            $product = O\R::dispense('product');
+            $product = RedBean\R::dispense('product');
             $product['name'] = $name;
             $product['price'] = $price;
             $product['quantity'] = $quantity;
             $product['producer'] = $producer;
-            $id = O\R::store($product);
+            $id = RedBean\R::store($product);
             return $id;
         }
         //لود کردن یک ریکورد
         function Load($id){
-            $product = O\R::load('product', $id);
+            $product = RedBean\R::load('product', $id);
             return $product;
         }
         //بروزرسانی
@@ -55,19 +55,19 @@
             switch($col){
                 case $col == 'name':
                     $product['name'] = $val;
-                    $id = O\R::store($product);
+                    $id = RedBean\R::store($product);
                     break;
                 case $col == 'price':
                     $product['price'] = $val;
-                    $id = O\R::store($product);
+                    $id = RedBean\R::store($product);
                     break;
                 case $col == 'quantity':
                     $product['quantity'] = $val;
-                    $id = O\R::store($product);
+                    $id = RedBean\R::store($product);
                     break;
                 case $col == 'producer':
                     $product['producer'] = $val;
-                    $id = O\R::store($product);
+                    $id = RedBean\R::store($product);
                     break;
             }
             // $this->closeDB();
@@ -76,7 +76,7 @@
         function Delete($id){
             $this->connect2DB();
             $product = $this->Load($id);
-            O\R::trash($product);
+            RedBean\R::trash($product);
         }
     }
 ?>

@@ -1,12 +1,12 @@
 <?php
     namespace models;
-    use RedBeanPHP as O;
+    use RedBeanPHP as RedBean;
     class dataBase{
         protected function connect2DB(){
-            $connection = O\R::setup("mysql:host=localhost;dbname=mydatab", "root", "");
+            $connection = RedBean\R::setup("mysql:host=localhost;dbname=mydatab", "root", "");
         }
         protected function closeDB(){
-            O\R::close();
+            RedBean\R::close();
         }
     }
 ?>
