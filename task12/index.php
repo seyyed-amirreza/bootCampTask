@@ -17,7 +17,7 @@
         case $url . '/process':
             require __DIR__ . $viewDir . 'process.php';
             break;
-
+        
         default:
             http_response_code(404);
             require __DIR__ . $viewDir . '404.php';

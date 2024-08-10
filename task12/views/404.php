@@ -9,5 +9,9 @@
 <body>
     <h1>404</h1>
     <p>You've reached the end of Internet.</p>
+    <form method="post" action="main">
+        <label for="B">press to go to the main menu</label>
+        <button id="B">Go</button>
+    </form>
 </body>
 </html>
