@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('like', function (Blueprint $table) {
             $table->id();
-            $table->char('likedBy',20);
+            $table->char('likedBy')->length(20);
             $table->char('productName');
             $table->timestamp('likedAt');
             $table->timestamp('removedAt');

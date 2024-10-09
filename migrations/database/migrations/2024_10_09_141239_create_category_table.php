@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->char('name');
             $table->char('items');
-            $table->timestamps('lastUpdated');
+            $table->timestamp('lastUpdated',precision: 0);
         });
     }
 

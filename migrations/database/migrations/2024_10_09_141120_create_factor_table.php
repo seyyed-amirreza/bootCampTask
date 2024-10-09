@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('factor', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->timestamp('createdAt');
-            $table->timestamp('paidAt');
-            $table->integer('total',10);
+            $table->timestamp('createdAt',precision: 0);
+            $table->timestamp('paidAt',precision: 0);
+            $table->integer('total')->length(10);
             $table->text('contents');
             $table->char('status');
-            $table->char('userName',20);
+            $table->char('userName')->length(20);
         });
     }
 

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('comment', function (Blueprint $table) {
             $table->id();
-            $table->char('userName',20);
-            $table->char('comment',400);
+            $table->char('userName')->length(20);
+            $table->text('comment')->length(400);
             $table->timestamp('postedAt');
             $table->integer('likes');
         });

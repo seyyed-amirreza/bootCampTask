@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('payment', function (Blueprint $table) {
             $table->id();
-            $table->timestamps('paidAt');
-            $table->timestamps('startedAt');
-            $table->timestamps('finishedAt');
-            $table->char('userName',20);
-            $table->integer('total',10);
-            $table->integer('trackingNumber',40);
+            $table->timestamp('paidAt',precision: 0);
+            $table->timestamp('startedAt',precision: 0);
+            $table->timestamp('finishedAt',precision: 0);
+            $table->char('userName')->length(20);
+            $table->integer('total')->length(10);
+            $table->integer('trackingNumber')->length(40);
         });
     }
 
